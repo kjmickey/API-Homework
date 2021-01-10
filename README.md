@@ -19,8 +19,10 @@ However there are exceptions caused by factors like:
     Going too far south where summers are not warm   
     
 
-2) There doesn't seem to be any relationship between latitude and cloudiness.  It is interesting to not that more than expected readings are either 100% cloudy or 100% sunny.  I'm not sure if this is accurate data, or lazy observations by humans (or machine algorythms?).
+2) There doesn't seem to be any relationship between latitude and cloudiness.  It is interesting to note that more-than-expected readings are either 100% cloudy or 100% sunny.  I'm not sure if this is accurate data, or lazy observations by humans (or automatic weather station algorythmns?).
 
 
-3) Coastal cities are heavily overrepresented, especially in the Southern Hemisphere has significantly more water area than land area.  By randomly generating Lat/Longs, we got many points that were out in the water, potentially hundreds, or even thousands of miles away from the city they mapped to.  As a result, cities on the coast, and especially on a peninsula are significanlty over sampled compared to cites in the interior of continents.
+3) Coastal cities are heavily overrepresented, especially in the Southern Hemisphere, which has significantly more water area than land area.  By randomly generating Lat/Longs, we got many points that were in the middle of the ocean, potentially hundreds, or even thousands of miles away from the city they mapped to.  As a result, cities on the coast, and especially cities on a peninsula are significanlty over-sampled compared to cites in the interior of continents.
+
+A potential fix to this problem is discarding any city that is more than 50 miles from it's random Lat/Long, and generating Lat/Longs until the 500+ cities are created.
 
